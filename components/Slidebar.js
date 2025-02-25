@@ -52,10 +52,10 @@ const Sidebar = ({ taskGroups, onCreateGroup, onSelectGroup,onDeleteGroup }) => 
       {/* Modal for adding new list */}
       {isModalOpen && (
        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-       <div className="bg-white rounded-lg p-6 w-full max-w-md sm:max-w-lg md:max-w-xl  shadow-lg">
+       <div className="bg-white rounded-3xl p-6 w-full max-w-md sm:max-w-lg md:max-w-xl  shadow-lg">
          {/* Header with Close Button */}
-         <div className="flex justify-between items-center mb-3">
-           <h2 className="text-lg font-semibold">New List</h2>
+         <div className="flex justify-between items-center mb-3 py-2">
+           <h2 className="text-lg font-semibold">Create a new list</h2>
            <button onClick={() => setIsModalOpen(false)} className="text-gray-500 hover:text-black">✖</button>
          </div>
      
@@ -65,11 +65,11 @@ const Sidebar = ({ taskGroups, onCreateGroup, onSelectGroup,onDeleteGroup }) => 
            value={newGroupName}
            onChange={(e) => setNewGroupName(e.target.value)}
            placeholder="Enter list name"
-           className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+           className="w-full p-4 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
          />
      
          {/* Color Palette */}
-         <div className="mt-4">
+         <div className="mt-4 mb-3">
            <p className="text-gray-600 mb-2">Add Color</p>
            <div className="flex flex-wrap gap-2 ">
              {colorOptions.map((color) => (
@@ -88,7 +88,7 @@ const Sidebar = ({ taskGroups, onCreateGroup, onSelectGroup,onDeleteGroup }) => 
          {/* Submit Button */}
          <button
            onClick={handleCreateGroup}
-           className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition duration-200"
+           className="w-full mt-4 bg-[#033487] hover:bg-blue-800 text-white py-5 rounded-2xl transition duration-200 text-xl "
          >
            Done
          </button>
