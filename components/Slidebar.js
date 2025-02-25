@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TaskGroupList from './TaskGroupList';
 
 const colorOptions = [
-  '#FF5733', '#FFA500', '#FFD700', '#ADFF2F', '#32CD32', '#00CED1', '#1E90FF',
+  '#FFFFFF','#FF5733', '#FFA500', '#FFD700', '#ADFF2F', '#32CD32', '#00CED1', '#1E90FF',
   '#4169E1', '#8A2BE2', '#C71585', '#FF1493', '#DC143C', '#FF4500'
 ];
 
@@ -71,13 +71,13 @@ const Sidebar = ({ taskGroups, onCreateGroup, onSelectGroup,onDeleteGroup }) => 
          {/* Color Palette */}
          <div className="mt-4">
            <p className="text-gray-600 mb-2">Add Color</p>
-           <div className="flex flex-wrap gap-2">
+           <div className="flex flex-wrap gap-2 ">
              {colorOptions.map((color) => (
                <button
                  key={color}
                  onClick={() => setSelectedColor(color)}
                  style={{ backgroundColor: color }}
-                 className={`w-6 h-6 border-2 ${
+                 className={`w-6 h-6  border-gray-400 border-2 ${
                    selectedColor === color ? 'border-black' : 'border-transparent'
                  }`}
                />
